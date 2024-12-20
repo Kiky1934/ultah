@@ -1,1 +1,1 @@
-tampilan_awal.html
+tampilan_awal
