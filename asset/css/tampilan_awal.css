@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.undangan {
+  background-color: #0e0000;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(12, 0, 0, 0.199);
+  width: 80%;
+  max-width: 800px;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards; /* Menambahkan animasi fadeIn saat load */
+  display: flex;
+  flex-direction: column; /* Mengatur isi konten menjadi kolom */
+  justify-content: center;
+  align-items: center; /* Menempatkan semua elemen di tengah */
+  margin: 0 auto; /* Memastikan konten terpusat */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.foto {
+  margin-bottom: 20px;
+  animation: slideInUp 0.8s ease-out; /* Animasi masuk foto */
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.foto img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #860000;
+}
+
+
+
+h1 {
+  color: #ff0000;
+  font-size: 36px;
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 20px;
+  animation: slideInUp 1s ease-out; /* Animasi judul */
+}
+
+h3 {
+  color: #ffffff;
+  font-size: 24px;
+  margin: 15px 0;
+  animation: slideInUp 1s ease-out 0.2s; /* Animasi subtitle dengan delay */
+}
+
+p {
+  color: #f4f4f9;
+  animation: fadeIn 1s ease-out 0.4s; /* Animasi untuk paragraf */
+}
+
+.countdown {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  font-size: 24px;
+  color: #ffffff;
+  animation: fadeIn 1s ease-out 0.6s; /* Animasi countdown */
+}
+
+.countdown-circle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-color: #860000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  animation: popIn 0.5s ease-out; /* Animasi saat countdown muncul */
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.count-text {
+  font-size: 36px;
+}
+
+.countdown p {
+  position: absolute;
+  bottom: 10px;
+  font-size: 14px;
+  margin: 0;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2b0202;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  animation: bounceIn 0.5s ease-out; /* Animasi tombol link */
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.link:hover {
+  background-color: #860000;
+  transform: scale(1.1); /* Efek pembesaran saat di hover */
+}
+
+/* CSS untuk tombol Play/Pause berbentuk lingkaran dengan ikon */
+.play-pause-btn {
+  width: 40px; /* Lebar tombol */
+  height: 40px; /* Tinggi tombol */
+  background-color: #860000;
+  color: white;
+  border: none;
+  border-radius: 50%; /* Membuat tombol berbentuk lingkaran */
+  font-size: 30px; /* Ukuran font lebih besar agar ikon pas di tengah lingkaran */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.play-pause-btn:hover {
+  background-color: #2b0202;
+}
+
+.play-pause-btn:active {
+  transform: scale(0.95); /* Efek klik */
+}
+
+.play-pause-btn i {
+  font-size: 30px; /* Menyesuaikan ukuran ikon */
+}

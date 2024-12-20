@@ -1,0 +1,284 @@
+/* Reset dan Setup dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    background-image: url('img/samehotel.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    min-height: 100vh;
+    padding-top: 30px;
+}
+
+/* Sticky Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    padding: 10px 0;
+    z-index: 100;
+    width: 100%;
+bottom: 25px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #4e0404; /* Warna putih agar kontras dengan navbar */
+    text-decoration: none;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.navbar ul li a:hover {
+    color: #e5ff00; /* Warna kuning cerah saat hover */
+}
+
+/* Foto Lingkaran di atas */
+.foto {
+    margin-bottom: 50px;
+    border-radius: 50%;
+    border: 3px solid #fff; /* Menyesuaikan dengan latar belakang terang */
+}
+
+.foto img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff; /* Penyesuaian dengan latar belakang */
+}
+
+/* Judul */
+h1 {
+    color: #ffffff; /* Menyesuaikan dengan latar belakang */
+    font-family: 'Dancing Script', cursive; /* Menggunakan font sambung */
+    font-size: 48px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 38px;
+    color: #e5ff00; /* Warna kuning cerah untuk kontras */
+    font-family: 'Dancing Script', cursive;
+}
+
+h3 {
+    font-size: 38px;
+    color: #4e0404; /* Warna kuning cerah untuk kontras */
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Batas antara bagian */
+#home, #waktu, #hadiah, #album {
+    padding: 30px;
+    margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.8); /* Latar belakang putih transparan */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Batas dan Desain untuk Waktu Acara */
+#hadiah img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Batas dan Desain untuk Album Foto */
+.album-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 5px 0;
+}
+
+.album-container img {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling untuk WhatsApp Button */
+.whatsapp-button {
+    margin-top: 30px;
+}
+
+.whatsapp-button p {
+    font-size: 16px;
+    color: #fff; /* Warna teks putih untuk kontras yang lebih baik */
+}
+
+.whatsapp-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4e0404; /* Merah marun untuk tombol */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.whatsapp-link:hover {
+    background-color: #ffeb3b; /* Kuning cerah saat hover */
+    color: #4e0404; /* Mengubah warna teks menjadi merah marun saat hover */
+}
+
+/* Styling untuk countdown dengan lingkaran */
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.countdown-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px; /* Lebar lingkaran */
+    height: 120px; /* Tinggi lingkaran */
+    background-color: rgba(255, 255, 255, 0.7); /* Latar belakang lingkaran */
+    border-radius: 50%; /* Membuat lingkaran */
+    border: 4px solid #4e0404; /* Border merah */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.count-text {
+    font-size: 36px;
+    font-weight: bold ;
+    color: #4e0404; /* Warna angka */
+}
+
+.countdown-circle p {
+    font-size: 14px;
+    color: #4e0404; /* Warna teks hari, jam, menit, detik */
+    margin-top: 5px;
+}
+
+/* Styling untuk Form Kehadiran */
+.kehadiran-options {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Jarak antara pilihan */
+}
+
+.kehadiran-options label {
+    margin: 0; /* Menghilangkan margin default */
+}
+.kehadiran {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Mengatur margin atas dan bawah, dan auto untuk kiri dan kanan */
+    max-width: 600px; /* Maksimal lebar untuk div */
+    width: 90%; /* Menggunakan lebar penuh hingga batas maksimum */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Menyusun item di tengah secara horizontal */
+}
+.kehadiran h3 {
+    font-size: 32px;
+    color: #4e0404;
+    font-family: 'Dancing Script', cursive;
+}
+
+.kehadiran p {
+    font-size: 16px;
+    color: #4e0404;
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+label {
+    font-size: 16px;
+    color: #4e0404;
+}
+
+input, select, textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #4e0404;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #4e0404;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e5ff00;
+    color: #4e0404;
+}
+
+#responseMessage p {
+    font-size: 18px;
+    color: #4e0404;
+    font-weight: bold;
+}
+
+/* Styling untuk daftar tamu */
+#guestList {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.guest-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #4e0404;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}#guestList {
+    list-style-type: none; /* Menghilangkan bullet points */
+    padding: 0; /* Menghilangkan padding default */
+}
+
+#guestList li {
+    padding: 5px 0; /* Jarak antar item daftar */
+}

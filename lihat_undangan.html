@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Ulang Tahun</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="asset/css/lihat_undangan.css">
+  <style>
+    /* Tambahkan CSS untuk form kehadiran */
+    .kehadiran {
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin: 20px 0;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .kehadiran-options {
+        margin-bottom: 15px;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    #guestList {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    #guestList li {
+        margin: 10px 0;
+        padding: 10px;
+        background-color: #e9e9e9;
+        border-radius: 5px;
+    }
+
+    #guestList img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="undangan">
+      <!-- Sticky Navbar -->
+      <nav class="navbar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#waktu">Acara</a></li>
+          <li><a href="#kehadiran">Kehadiran</a></li> <!-- Perbaiki link ini -->
+          <li><a href="#album">Album</a></li>
+        </ul>
+      </nav>
+
+      <audio autoplay loop>
+        <source src="asset/img/penyakit.mp3" type="audio/mp3">
+      </audio>
+
+      <!-- Foto Lingkaran di atas -->
+      <div class="foto" id="home">
+        <img src="asset/img/bedol.jpeg" alt="Foto Ulang Tahun" />
+      </div>
+      <h1>21th</h1>
+      <h1><strong> Selamat Ulang Tahun </strong></h1>
+      <h2>MUHAMMAD AFDHALLUDDZIKRI ALHUSAINI</h2>
+      <p style="color: antiquewhite;">Assalamu'alaikum wr.wb.</p>
+      <p style="color: antiquewhite;">Kepada Yth.</p>
+      <p style="color: antiquewhite;">Bapak/Ibu/Saudara/i</p>
+      <p style="color: antiquewhite;">Kami mengundang anda sekalian dalam acara kami, yaitu dalam rangka peringatan Ulang Tahun saudara kami yaitu ;
+      <h2>Muhammad Afdhalluddzikri Al-Husainy</h2>
+
+      <!-- Waktu Acara -->
+      <div class="countdown" id="waktu">
+        <div class="countdown-circle" id="days">
+          <span class="count-text" id="days-text">0</span>
+          <p>Hari</p>
+        </div>
+        <div class="countdown-circle" id="hours">
+          <span class="count-text" id="hours-text">0</span>
+          <p>Jam</p>
+        </div>
+        <div class="countdown-circle" id="minutes">
+          <span class="count-text" id="minutes-text">0</span>
+          <p>Menit</p>
+        </div>
+        <div class="countdown-circle" id="seconds">
+          <span class="count-text" id="seconds-text">0</span>
+          <p>Detik</p>
+        </div>
+      </div>
+
+      <!-- Informasi Acara -->
+      <div class="acara-info" id="hadiah">
+        <h3>Informasi Acara</h3>
+        <p><strong>Tanggal:</strong> 25 Januari 2025</p>
+        <p><strong>Waktu:</strong> 16:00 WITA</p>
+        <p><strong>Tempat:</strong> Same Hotel, Lombok Barat</p>
+
+        <!-- Gambar Tempat Acara -->
+        <div class="tempat-gambar">
+          <img src="asset/img/samehotel.jpg" alt="Hotel Same Hotel" />
+        </div>
+      </div>
+      
+      <!-- Form Kehadiran -->
+      <div class="kehadiran" id="kehadiran">
+        <h3>Konfirmasi Kehadiran</h3>
+        <p>Silakan konfirmasi kehadiran Anda dengan mengisi form berikut:</p>
+        <form id="kehadiranForm">
+            <div class="form-group">
+                <label for="nama">Nama Anda:</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+            </div>
+            
+            <div class="kehadiran-options">
+                <label for="hadir">Hadir</label>
+                <input type="radio" id="hadir" name="kehadiran" value="Hadir" required>
+                
+                <label for="tidak_hadir">Tidak Hadir</label>
+                <input type="radio" id="tidak_hadir" name="kehadiran" value="Tidak Hadir">
+            </div>
+
+            <div class="form-group">
+                <label for="pesan">Pesan (Opsional):</label>
+                <textarea id="pesan" name="pesan" placeholder="Pesan untuk tuan rumah (opsional)"></textarea>
+            </div>
+
+            <button type="submit">Kirim Konfirmasi</button>
+        </form>
+        <div id="responseMessage" style="display:none;">
+            <p>Terima kasih atas konfirmasi kehadiran Anda!</p>
+        </div>
+        <h4>Daftar Kehadiran:</h4>
+        <ul id="guestList"></ul>
+      </div>
+
+      <!-- Bagian Hadiah -->
+      <div class="hadiah" id="hadiah">
+        <h3>Hadiah Spesial</h3>
+        <p>Untuk dapat mengikuti event ini dan mendapatkan hadiah spesial, berikut adalah nomor rekening yang bisa digunakan:</p>
+        <p><strong>No. Rekening:</strong> 901830047242 (seabank)</p>
+        <img src="asset/img/barcode.jpeg" alt="Gambar Hadiah" />
+      </div>
+
+      <!-- Album Foto -->
+      <div class="album" id="album">
+        <h3>Album Foto</h3>
+        <div class="album-container">
+          <img src="asset/img/kiky.jpeg" alt="Foto 1" />
+          <img src="asset/img/ilham.jpeg" alt="Foto 2" />
+          <img src="asset/img/yus1.jpeg" alt="Foto 3" />
+          <img src="asset/img/yus2.jpeg" alt="Foto 4" />
+          <img src="asset/img/afdhal.jpeg" alt="Foto 5" />
+        </div>
+      </div>
+
+      <!-- Tombol untuk membuka WhatsApp -->
+      <div class="whatsapp-button">
+        <p>Kami mengharapkan kehadiran Bapak/ibu/Saudara/saudari sekalian di tempat, Terimakasih. Jika ada hal yang akan ditanyakan bisa menghubungi kami dengan menekan tombol dibawah ini</p>
+        <a href="https://wa.me/+6289668692824?text=Halo%20saya%20ingin%20menghadiri%20acara%20ulang%20tahun" target="_blank" class="whatsapp-link">Hubungi via WhatsApp</a>
+      </div>
+  </div>
+
+  <script>
+      // Array gambar profil
+      const profileImages = [
+          "https://randomuser.me/api/portraits/men/1.jpg",
+          "https://randomuser.me/api/portraits/men/2.jpg",
+          "https://randomuser.me/api/portraits/men/3.jpg",
+          "https://randomuser.me/api/portraits/women/1.jpg",
+          "https://randomuser.me/api/portraits/women/2.jpg",
+          "https://randomuser.me/api/portraits/women/3.jpg ",
+          "https://randomuser.me/api/portraits/men/4.jpg",
+          "https://randomuser.me/api/portraits/women/4.jpg"
+      ];
+
+      // Fungsi untuk menangani pengiriman form konfirmasi kehadiran
+      document.getElementById("kehadiranForm").addEventListener("submit", function(event) {
+          event.preventDefault(); // Mencegah pengiriman form secara default
+          // Mengambil nilai dari form
+          var nama = document.getElementById("nama").value;
+          var kehadiran = document.querySelector('input[name="kehadiran"]:checked').value; // Mengambil nilai dari radio button
+          var pesan = document.getElementById("pesan").value;
+
+          // Menampilkan pesan konfirmasi
+          document.getElementById("responseMessage").style.display = "block";
+
+          // Memilih gambar profil secara acak
+          var randomImage = profileImages[Math.floor(Math.random() * profileImages.length)];
+
+          // Menampilkan konfirmasi kehadiran di daftar tamu
+          var guestList = document.getElementById("guestList");
+          var guestItem = document.createElement("li");
+          
+          // Menambahkan foto profil
+          var profileImage = `<img src="${randomImage}" alt="${nama}'s profile">`;
+          
+          guestItem.innerHTML = `${profileImage}<strong>${nama}</strong> - ${kehadiran} <br> <em>${pesan}</em>`;
+          guestList.appendChild(guestItem);
+
+          // Kosongkan form setelah pengiriman
+          document.getElementById("kehadiranForm").reset();
+      });
+  </script>
+</body>
+</html>
