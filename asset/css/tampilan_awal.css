@@ -79,7 +79,9 @@ h3 {
   margin: 15px 0;
   animation: slideInUp 1s ease-out 0.2s; /* Animasi subtitle dengan delay */
 }
-
+#for{
+  font-family: 'Dancing Script', cursive;
+}
 p {
   color: #f4f4f9;
   animation: fadeIn 1s ease-out 0.4s; /* Animasi untuk paragraf */
